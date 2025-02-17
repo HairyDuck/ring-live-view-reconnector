@@ -93,7 +93,7 @@ To work on this extension locally:
 
 ## Changelog
 
-### Version 1.0.0 (2024-02-19)
+### Version 1.0.0 (2025-02-19)
 - Initial release
 - Automatic reconnection functionality
 - Debug mode
