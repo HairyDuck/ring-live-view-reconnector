@@ -32,6 +32,22 @@ A Chrome extension that automatically reconnects your Ring camera's Live View wh
 
 No additional configuration is needed. The extension works automatically in the background.
 
+## How It Works
+
+The extension uses a combination of methods to detect when your Ring Live View disconnects:
+1. Monitors for the appearance of the reconnect dialog
+2. Watches for DOM changes that indicate a disconnect
+3. Uses a backup periodic check every 30 seconds
+
+When a disconnect is detected, the extension automatically clicks the "Reconnect" button, maintaining your live view connection.
+
+## Debug Mode
+
+The extension includes a debug mode that can be enabled to help troubleshoot issues:
+1. Open Chrome Developer Tools (F12)
+2. Check the Console tab
+3. Look for messages prefixed with `[Ring Reconnector Debug]`
+
 ## Privacy
 
 This extension:
@@ -47,11 +63,43 @@ For more details, see our [Privacy Policy](privacy-policy.md).
 If you encounter any issues or have suggestions:
 1. Check the [Known Issues](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
 2. Create a new issue if your problem isn't already listed
+3. Include debug logs if possible
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. To contribute:
+
+1. Fork the repository
+2. Create a new branch for your feature
+3. Make your changes
+4. Submit a pull request
+
+Please ensure your code follows the existing style and includes appropriate comments.
+
+## Development
+
+To work on this extension locally:
+
+1. Clone the repository
+2. Make your changes to the code
+3. Load the extension in Chrome using Developer mode
+4. Test your changes
+5. Submit a pull request with your improvements
+
+## Changelog
+
+### Version 1.0.0 (2024-02-19)
+- Initial release
+- Automatic reconnection functionality
+- Debug mode
+- Privacy-focused implementation
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to all the Ring camera users who inspired this solution
+- Contributors who help improve this extension
+- Ring for their camera system (though this is an unofficial extension) 
