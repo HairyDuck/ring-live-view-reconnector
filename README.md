@@ -48,15 +48,20 @@ The extension includes a debug mode that can be enabled to help troubleshoot iss
 2. Check the Console tab
 3. Look for messages prefixed with `[Ring Reconnector Debug]`
 
-## Privacy
+## Privacy & Terms
 
-This extension:
-- Does not collect any data
-- Does not require any special permissions beyond accessing Ring.com
+This extension is designed with privacy as a core principle:
+- No data collection or storage
+- No tracking or analytics
 - Works entirely locally in your browser
-- Does not communicate with any external servers
+- No external communications
+- Minimal permissions required
 
-For more details, see our [Privacy Policy](privacy-policy.md).
+By installing and using this extension, you agree to our:
+- [Privacy Policy and Terms of Use](privacy-policy.md)
+- [MIT License](LICENSE)
+
+This extension is not affiliated with or endorsed by Ring/Amazon.
 
 ## Support
 
@@ -88,7 +93,7 @@ To work on this extension locally:
 
 ## Changelog
 
-### Version 1.0.0 (2025-02-19)
+### Version 1.0.0 (2024-02-19)
 - Initial release
 - Automatic reconnection functionality
 - Debug mode
