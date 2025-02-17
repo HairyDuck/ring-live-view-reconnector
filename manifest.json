@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ring Live View Reconnector",
+  "version": "1.0.0",
+  "description": "Automatically reconnects Ring Live View when it disconnects, ensuring continuous camera feed viewing.",
+  "author": "HairyDuck",
+  "homepage_url": "https://github.com/HairyDuck/ring-live-view-reconnector",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://account.ring.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+} 
