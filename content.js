@@ -1,23 +1,21 @@
 // Debug mode - set to true to see detailed logs
 const DEBUG = true;
 
-function debugLog(message) {
-    if (DEBUG) {
+function debugLog(message, isImportant = false) {
+    if (DEBUG && isImportant) {
         console.log(`[Ring Reconnector Debug] ${message}`);
     }
 }
 
 // Function to click the reconnect button
 function clickReconnectButton() {
-    debugLog('Checking for reconnect button...');
-
     // Method 1: Look for the specific modal and button
     const modal = document.querySelector('[data-testid="live-view__global-reconnect-modal"]');
     if (modal) {
-        debugLog('Found reconnect modal');
+        debugLog('Found reconnect modal', true);
         const reconnectButton = modal.querySelector('button[data-testid="modal__accept-button"]');
         if (reconnectButton) {
-            debugLog('Found reconnect button by test-id, clicking...');
+            debugLog('Clicking reconnect button...', true);
             reconnectButton.click();
             return true;
         }
@@ -25,11 +23,9 @@ function clickReconnectButton() {
 
     // Method 2: Backup - look for any button containing "Reconnect" text
     const allButtons = document.querySelectorAll('button');
-    debugLog(`Scanning ${allButtons.length} buttons for 'Reconnect' text`);
-    
     for (const button of allButtons) {
         if (button.textContent.includes('Reconnect')) {
-            debugLog('Found button with Reconnect text, clicking...');
+            debugLog('Found and clicking reconnect button (backup method)...', true);
             button.click();
             return true;
         }
@@ -56,7 +52,6 @@ const observer = new MutationObserver((mutations) => {
         );
 
         if (significantChanges) {
-            debugLog('Significant DOM change detected, checking for reconnect button...');
             lastSignificantChange = now;
             // Small delay to ensure the modal is fully rendered
             setTimeout(clickReconnectButton, 500);
@@ -73,13 +68,7 @@ observer.observe(document.body, {
 });
 
 // Backup check every 30 seconds just in case
-setInterval(() => {
-    debugLog('Performing backup periodic check');
-    clickReconnectButton();
-}, 30000); // Check every 30 seconds instead of 2 seconds
+setInterval(clickReconnectButton, 30000);
 
 // Log that the extension is running
-debugLog('Extension initialized and monitoring for disconnects');
-debugLog('Extension will check for reconnect button when:');
-debugLog('1. Significant DOM changes are detected (new divs/buttons added)');
-debugLog('2. Backup check every 30 seconds'); 
+debugLog('Ring Live View Reconnector initialized and monitoring for disconnects', true); 
