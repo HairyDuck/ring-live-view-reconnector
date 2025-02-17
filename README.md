@@ -13,7 +13,7 @@ A Chrome extension that automatically reconnects your Ring camera's Live View wh
 ## Installation
 
 ### Chrome Web Store (Recommended)
-1. Visit the [Ring Live View Reconnector](https://chrome.google.com/webstore/detail/[your-extension-id]) on the Chrome Web Store
+1. Visit the [Ring Live View Reconnector](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh) on the Chrome Web Store
 2. Click "Add to Chrome"
 3. Confirm the installation
 
