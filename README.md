@@ -5,10 +5,25 @@ A Chrome extension that automatically reconnects your Ring camera's Live View wh
 ## Features
 
 - Automatically clicks the "Reconnect" button when Ring Live View disconnects
+- Visual notification indicator when reconnection occurs
 - Works silently in the background
 - No configuration needed
 - Lightweight and efficient
 - Privacy-focused: operates entirely locally with no data collection
+
+## How It Works
+
+The extension monitors your Ring Live View and when a disconnect occurs:
+1. Automatically detects the disconnect dialog
+2. Clicks the "Reconnect" button for you
+3. Maintains your live view connection without manual intervention
+
+## Visual Feedback
+
+When the extension reconnects your live view:
+- A small blue rotating ring appears near the close button
+- Indicator disappears after reconnection is complete
+- Non-intrusive and matches Ring's interface design
 
 ## Installation
 
@@ -32,21 +47,13 @@ A Chrome extension that automatically reconnects your Ring camera's Live View wh
 
 No additional configuration is needed. The extension works automatically in the background.
 
-## How It Works
-
-The extension uses a combination of methods to detect when your Ring Live View disconnects:
-1. Monitors for the appearance of the reconnect dialog
-2. Watches for DOM changes that indicate a disconnect
-3. Uses a backup periodic check every 30 seconds
-
-When a disconnect is detected, the extension automatically clicks the "Reconnect" button, maintaining your live view connection.
-
 ## Debug Mode
 
 The extension includes a debug mode that can be enabled to help troubleshoot issues:
 1. Open Chrome Developer Tools (F12)
 2. Check the Console tab
 3. Look for messages prefixed with `[Ring Reconnector Debug]`
+4. Messages appear when reconnection is attempted
 
 ## Privacy & Terms
 
@@ -96,6 +103,7 @@ To work on this extension locally:
 ### Version 1.0.0 (2025-02-19)
 - Initial release
 - Automatic reconnection functionality
+- Visual feedback with rotating ring indicator
 - Debug mode
 - Privacy-focused implementation
 
