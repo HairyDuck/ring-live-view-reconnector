@@ -1,5 +1,12 @@
 # Ring Live View Reconnector
 
+[![Build Status](https://github.com/HairyDuck/ring-live-view-reconnector/actions/workflows/build.yml/badge.svg)](https://github.com/HairyDuck/ring-live-view-reconnector/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/releases/latest)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+[![Firefox Add-on](https://img.shields.io/amo/v/ring-live-view-reconnector?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+[![License](https://img.shields.io/github/license/HairyDuck/ring-live-view-reconnector)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
+
 A browser extension that automatically reconnects your Ring camera's Live View when it disconnects, ensuring continuous monitoring of your Ring cameras.
 
 ## Features
@@ -36,7 +43,7 @@ When the extension reconnects your live view:
 3. Confirm the installation
 
 ### Firefox Add-ons (Recommended)
-1. Visit the [Ring Live View Reconnector](https://addons.mozilla.org/en-GB/firefox/addon/ring-live-view-reconnector/) on Firefox Add-ons
+1. Visit the [Ring Live View Reconnector](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/) on Firefox Add-ons
 2. Click "Add to Firefox"
 3. Confirm the installation
 
