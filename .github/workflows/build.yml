@@ -1,0 +1,66 @@
+name: Build Extensions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Validate extension files
+      run: node scripts/validate.js
+
+    - name: Create build directories
+      run: |
+        mkdir -p dist/chrome
+        mkdir -p dist/firefox
+
+    - name: Build Chrome extension
+      run: |
+        cp -r src/shared/* dist/chrome/
+        cp src/chrome/manifest.json dist/chrome/
+        cp src/chrome/icon*.png dist/chrome/
+        cd dist/chrome
+        zip -r ../ring-reconnector-chrome.zip .
+
+    - name: Build Firefox extension
+      run: |
+        cp -r src/shared/* dist/firefox/
+        cp src/firefox/manifest.json dist/firefox/
+        cp src/firefox/icon*.png dist/firefox/
+        cd dist/firefox
+        zip -r ../ring-reconnector-firefox.zip .
+
+    - name: Upload Chrome artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: chrome-extension
+        path: dist/ring-reconnector-chrome.zip
+
+    - name: Upload Firefox artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: firefox-extension
+        path: dist/ring-reconnector-firefox.zip
+
+    # Attach to release if this is a release event
+    - name: Upload Release Assets
+      if: github.event_name == 'release'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          dist/ring-reconnector-chrome.zip
+          dist/ring-reconnector-firefox.zip 

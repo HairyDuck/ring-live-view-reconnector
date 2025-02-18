@@ -1,0 +1,63 @@
+# Build and Distribution
+dist/
+web-ext-artifacts/
+
+# Generated Icons
+src/chrome/icon*.png
+src/firefox/icon*.png
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Browser Extension specific
+*.crx
+*.pem
+*.zip
+*.xpi
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Debug logs
+debug.log
+web-ext-artifacts/
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing and Coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Package manager locks
+# We keep package-lock.json for reproducible builds
+yarn.lock
+pnpm-lock.yaml
+
+# Local development files
+*.local
+*.local.* 

@@ -1,6 +1,6 @@
 # Ring Live View Reconnector
 
-A Chrome extension that automatically reconnects your Ring camera's Live View when it disconnects, ensuring continuous monitoring of your Ring cameras.
+A browser extension that automatically reconnects your Ring camera's Live View when it disconnects, ensuring continuous monitoring of your Ring cameras.
 
 ## Features
 
@@ -10,18 +10,21 @@ A Chrome extension that automatically reconnects your Ring camera's Live View wh
 - No configuration needed
 - Lightweight and efficient
 - Privacy-focused: operates entirely locally with no data collection
+- Supports both Chrome and Firefox browsers
 
 ## How It Works
 
 The extension monitors your Ring Live View and when a disconnect occurs:
 1. Automatically detects the disconnect dialog
 2. Clicks the "Reconnect" button for you
-3. Maintains your live view connection without manual intervention
+3. Shows a subtle blue rotating ring indicator near the close button
+4. Maintains your live view connection without manual intervention
 
 ## Visual Feedback
 
 When the extension reconnects your live view:
 - A small blue rotating ring appears near the close button
+- Hover over it to see "Ring Live View Reconnector - Automatically reconnecting..."
 - Indicator disappears after reconnection is complete
 - Non-intrusive and matches Ring's interface design
 
@@ -32,28 +35,73 @@ When the extension reconnects your live view:
 2. Click "Add to Chrome"
 3. Confirm the installation
 
+### Firefox Add-ons (Recommended)
+1. Visit the [Ring Live View Reconnector](https://addons.mozilla.org/en-GB/firefox/addon/ring-live-view-reconnector/) on Firefox Add-ons
+2. Click "Add to Firefox"
+3. Confirm the installation
+
 ### Manual Installation (Development)
-1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" in the top right corner
-4. Click "Load unpacked" and select the directory containing these files
 
-## Usage
+#### Prerequisites
+- Node.js 18 or higher
+- npm (comes with Node.js)
 
-1. Install the extension
-2. Visit [Ring.com](https://account.ring.com/) and log in to your account
-3. Open any camera's Live View
-4. The extension will automatically reconnect the Live View if it disconnects
+#### Building from Source
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/HairyDuck/ring-live-view-reconnector.git
+   cd ring-live-view-reconnector
+   ```
 
-No additional configuration is needed. The extension works automatically in the background.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Debug Mode
+3. Build the extensions:
+   ```bash
+   npm run build
+   ```
+   This will create both Chrome and Firefox extensions in the `dist` directory.
 
-The extension includes a debug mode that can be enabled to help troubleshoot issues:
-1. Open Chrome Developer Tools (F12)
-2. Check the Console tab
-3. Look for messages prefixed with `[Ring Reconnector Debug]`
-4. Messages appear when reconnection is attempted
+4. Load the extension:
+   - Chrome:
+     1. Open Chrome and go to `chrome://extensions/`
+     2. Enable "Developer mode"
+     3. Click "Load unpacked"
+     4. Select the `dist/chrome` directory
+
+   - Firefox:
+     1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
+     2. Click "Load Temporary Add-on"
+     3. Select the `dist/firefox` directory
+
+## Development
+
+### Available Scripts
+- `npm run build` - Build both Chrome and Firefox extensions
+- `npm run build:chrome` - Build Chrome extension only
+- `npm run build:firefox` - Build Firefox extension only
+- `npm run dev` - Build and run Firefox extension for development
+- `npm run lint` - Lint the extension code
+- `npm run clean` - Clean build artifacts
+- `npm run validate` - Validate extension files
+- `npm run icons` - Generate extension icons
+
+### File Structure
+```
+├── src/
+│   ├── shared/           # Shared code between browsers
+│   │   ├── content.js    # Main extension logic
+│   │   └── icons/       # Source SVG icons
+│   ├── chrome/          # Chrome-specific files
+│   │   └── manifest.json
+│   └── firefox/         # Firefox-specific files
+│       └── manifest.json
+├── scripts/             # Build and utility scripts
+├── dist/               # Build output (generated)
+└── screenshots/        # Store screenshots
+```
 
 ## Privacy & Terms
 
@@ -79,33 +127,31 @@ If you encounter any issues or have suggestions:
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. To contribute:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
+### Development Setup
 1. Fork the repository
 2. Create a new branch for your feature
 3. Make your changes
-4. Submit a pull request
+4. Run `npm run validate` to ensure everything works
+5. Submit a pull request
 
 Please ensure your code follows the existing style and includes appropriate comments.
 
-## Development
-
-To work on this extension locally:
-
-1. Clone the repository
-2. Make your changes to the code
-3. Load the extension in Chrome using Developer mode
-4. Test your changes
-5. Submit a pull request with your improvements
-
 ## Changelog
 
-### Version 1.0.0 (2025-02-19)
+### Version 1.1.0 (2025-02-18)
+- Added Firefox support (minimum version 58.0)
+- Improved initialization process for faster loading
+- Enhanced build system with better validation
+- Added automated GitHub Actions workflow
+- Improved error handling and logging
+
+### Version 1.0.0 (2025-02-17)
 - Initial release
 - Automatic reconnection functionality
-- Visual feedback with rotating ring indicator
-- Debug mode
 - Privacy-focused implementation
+- Chrome support
 
 ## License
 

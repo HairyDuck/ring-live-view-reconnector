@@ -1,0 +1,40 @@
+{
+    "name": "ring-live-view-reconnector",
+    "version": "1.1.0",
+    "description": "Browser extension that automatically reconnects Ring Live View when it disconnects",
+    "scripts": {
+        "clean": "node -e \"require('./scripts/build.js').cleanup()\"",
+        "validate": "node scripts/validate.js",
+        "build": "node scripts/convert-icons.js && node scripts/build.js",
+        "build:chrome": "node scripts/convert-icons.js && node scripts/build.js chrome",
+        "build:firefox": "node scripts/convert-icons.js && node scripts/build.js firefox",
+        "dev": "node scripts/convert-icons.js && node scripts/build.js && web-ext run -s dist/firefox",
+        "lint": "web-ext lint -s dist/firefox",
+        "icons": "node scripts/convert-icons.js",
+        "prebuild": "npm run clean",
+        "predev": "npm run clean"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HairyDuck/ring-live-view-reconnector.git"
+    },
+    "keywords": [
+        "ring",
+        "camera",
+        "live-view",
+        "reconnect",
+        "browser-extension"
+    ],
+    "author": "HairyDuck",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HairyDuck/ring-live-view-reconnector/issues"
+    },
+    "homepage": "https://github.com/HairyDuck/ring-live-view-reconnector#readme",
+    "devDependencies": {
+        "archiver": "^5.3.1",
+        "semver": "^7.5.4",
+        "sharp": "^0.33.2",
+        "web-ext": "^7.11.0"
+    }
+} 
