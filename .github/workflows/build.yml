@@ -20,42 +20,35 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Generate icons
+      run: node scripts/convert-icons.js
+
     - name: Validate extension files
       run: node scripts/validate.js
 
     - name: Create build directories
       run: |
-        mkdir -p dist/chrome
-        mkdir -p dist/firefox
+        mkdir -p dist/chrome/unpacked
+        mkdir -p dist/firefox/unpacked
 
-    - name: Build Chrome extension
-      run: |
-        cp -r src/shared/* dist/chrome/
-        cp src/chrome/manifest.json dist/chrome/
-        cp src/chrome/icon*.png dist/chrome/
-        cd dist/chrome
-        zip -r ../ring-reconnector-chrome.zip .
-
-    - name: Build Firefox extension
-      run: |
-        cp -r src/shared/* dist/firefox/
-        cp src/firefox/manifest.json dist/firefox/
-        cp src/firefox/icon*.png dist/firefox/
-        cd dist/firefox
-        zip -r ../ring-reconnector-firefox.zip .
+    - name: Build extensions
+      run: node scripts/build.js
 
     - name: Upload Chrome artifact
       uses: actions/upload-artifact@v4
       with:
         name: chrome-extension
-        path: dist/ring-reconnector-chrome.zip
+        path: dist/chrome/packed/ring-reconnector.zip
         compression-level: 9
 
     - name: Upload Firefox artifact
       uses: actions/upload-artifact@v4
       with:
         name: firefox-extension
-        path: dist/ring-reconnector-firefox.zip
+        path: dist/firefox/packed/ring-reconnector.xpi
         compression-level: 9
 
     # Attach to release if this is a release event
@@ -64,5 +57,5 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          dist/ring-reconnector-chrome.zip
-          dist/ring-reconnector-firefox.zip 
+          dist/chrome/packed/ring-reconnector.zip
+          dist/firefox/packed/ring-reconnector.xpi 
