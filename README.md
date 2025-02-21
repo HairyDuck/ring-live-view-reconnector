@@ -148,7 +148,7 @@ Please ensure your code follows the existing style and includes appropriate comm
 
 ## Changelog
 
-### Version 1.1.1 (2025-02-19)
+### Version 1.1.1 (2025-02-21)
 - Removed unnecessary activeTab permission for better privacy
 - Updated documentation to reflect permission changes
 - Improved security by using minimal required permissions
