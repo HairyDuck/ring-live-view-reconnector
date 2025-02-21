@@ -117,7 +117,8 @@ This extension is designed with privacy as a core principle:
 - No tracking or analytics
 - Works entirely locally in your browser
 - No external communications
-- Minimal permissions required
+- No special permissions required
+- Only runs on account.ring.com
 
 By installing and using this extension, you agree to our:
 - [Privacy Policy and Terms of Use](privacy-policy.md)
@@ -146,6 +147,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Please ensure your code follows the existing style and includes appropriate comments.
 
 ## Changelog
+
+### Version 1.1.1 (2025-02-19)
+- Removed unnecessary activeTab permission for better privacy
+- Updated documentation to reflect permission changes
+- Improved security by using minimal required permissions
 
 ### Version 1.1.0 (2025-02-18)
 - Added Firefox support (minimum version 58.0)

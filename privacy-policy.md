@@ -10,9 +10,9 @@
 - No user data is saved locally or remotely
 
 ### Permissions
-The extension requires minimal permissions:
-- `activeTab`: Used only to detect and click the reconnect button on Ring.com
-- This permission is limited to account.ring.com domain only
+The extension requires no special permissions:
+- Only uses content scripts that run on account.ring.com domain
+- No access to browser features or APIs
 - No access to camera feeds, account data, or other Ring information
 
 ### Third-Party Services
