@@ -1,4 +1,4 @@
-# Ring.com Live View Reconnector
+# Ring Live View Reconnector | Auto-Reconnect for Ring Cameras
 
 [![Build Status](https://github.com/HairyDuck/ring-live-view-reconnector/actions/workflows/build.yml/badge.svg)](https://github.com/HairyDuck/ring-live-view-reconnector/actions)
 [![GitHub Release](https://img.shields.io/github/v/release/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/releases/latest)
@@ -7,83 +7,94 @@
 [![License](https://img.shields.io/github/license/HairyDuck/ring-live-view-reconnector)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
 
-A browser extension that automatically reconnects your Ring camera's Live View when it disconnects, ensuring continuous monitoring of your Ring cameras.
+[![Chrome Users](https://img.shields.io/chrome-web-store/users/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome%20users)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+[![Firefox Users](https://img.shields.io/amo/users/ring-live-view-reconnector?label=firefox%20users)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
 
-## Features
+> 🎥 Never miss a moment with your Ring cameras! This browser extension automatically fixes Ring Live View disconnections, ensuring continuous monitoring of your Ring doorbell cameras and security cameras.
 
-- Automatically clicks the "Reconnect" button when Ring Live View disconnects
-- Visual notification indicator when reconnection occurs
-- Works silently in the background
-- No configuration needed
-- Lightweight and efficient
-- Privacy-focused: operates entirely locally with no data collection
-- Supports both Chrome and Firefox browsers
+## 🌟 Key Features
 
-## How It Works
+- ✨ **Auto-Reconnect**: Instantly restores Ring camera live view when disconnected
+- 🔒 **Privacy First**: No data collection, works 100% locally
+- 🚀 **Zero Configuration**: Works immediately after installation
+- 🎯 **Lightweight**: Minimal system resource usage
+- 🌐 **Browser Support**: Works on both Chrome and Firefox
+- 💫 **Visual Feedback**: Subtle notification when reconnecting
+- ⚡ **Fast Loading**: Optimized for quick response
+- 🛡️ **Secure**: No special permissions required
 
-The extension monitors your Ring Live View and when a disconnect occurs:
-1. Automatically detects the disconnect dialog
-2. Clicks the "Reconnect" button for you
-3. Shows a subtle blue rotating ring indicator near the close button
-4. Maintains your live view connection without manual intervention
+## ⚠️ Important Battery Notice
 
-## Visual Feedback
+> 🔋 **For Battery-Powered Ring Devices**: Using this extension will keep your camera's live view continuously connected, which can significantly increase battery drain. If you're using battery-powered Ring devices (like the Battery Doorbell or Battery Spotlight Cam), please be aware that you may need to recharge your devices more frequently. This is most impactful when keeping the live view open for extended periods.
 
-When the extension reconnects your live view:
-- A small blue rotating ring appears near the close button
-- Hover over it to see "Ring Live View Reconnector - Automatically reconnecting..."
-- Indicator disappears after reconnection is complete
-- Non-intrusive and matches Ring's interface design
+## 🎯 Compatibility
 
-## Installation
+### Supported Ring Devices
+- Ring Video Doorbell (all models)* 
+- Ring Security Cameras*
+- Ring Stick Up Cam*
+- Ring Spotlight Cam*
+- Ring Floodlight Cam
+- Ring Indoor Cam
+- Ring Elite
 
-### Chrome Web Store (Recommended)
-1. Visit the [Ring Live View Reconnector](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh) on the Chrome Web Store
+*Note: Battery-powered versions of these devices will experience faster battery drain when using live view for extended periods.
+
+### Supported Browsers
+- Google Chrome (latest)
+- Mozilla Firefox (v58.0+)
+- Chrome-based browsers (Edge, Brave, etc.)
+
+## 🔍 How It Works
+
+The extension automatically:
+1. 👀 Monitors your Ring camera live view
+2. 🔄 Detects disconnection events
+3. 🖱️ Clicks the reconnect button instantly
+4. ✅ Maintains continuous camera feed
+
+You'll know it's working when:
+- A subtle blue rotating ring appears near the close button during reconnection
+- Your live view stays connected without manual intervention
+- Debug logs appear in the console (if enabled)
+
+## 📥 Quick Install
+
+### Chrome Users
+1. Visit [Ring Live View Reconnector on Chrome Web Store](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
 2. Click "Add to Chrome"
-3. Confirm the installation
+3. Start watching your Ring cameras worry-free!
 
-### Firefox Add-ons (Recommended)
-1. Visit the [Ring Live View Reconnector](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/) on Firefox Add-ons
+### Firefox Users
+1. Visit [Ring Live View Reconnector on Firefox Add-ons](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
 2. Click "Add to Firefox"
-3. Confirm the installation
+3. Enjoy uninterrupted Ring camera viewing!
 
-### Manual Installation (Development)
+## 🔐 Privacy & Security
 
-#### Prerequisites
-- Node.js 18 or higher
-- npm (comes with Node.js)
+We take your privacy seriously:
+- ✅ No data collection or storage
+- ✅ No tracking or analytics
+- ✅ Works entirely in your browser
+- ✅ No external communications
+- ✅ No special permissions needed
+- ✅ Only runs on account.ring.com
 
-#### Building from Source
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/HairyDuck/ring-live-view-reconnector.git
-   cd ring-live-view-reconnector
-   ```
+## 🤝 Support & Community
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Troubleshooting
+If the extension isn't working:
+1. Make sure you're on https://account.ring.com
+2. Check that the extension is enabled in your browser
+3. Try refreshing the page
+4. Ensure you're using a supported browser version
 
-3. Build the extensions:
-   ```bash
-   npm run build
-   ```
-   This will create both Chrome and Firefox extensions in the `dist` directory.
+### Get Help
+- 🐛 [Report Issues](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
+- 💡 [Suggest Features](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
+- 👥 [Contribute Code](https://github.com/HairyDuck/ring-live-view-reconnector/pulls)
 
-4. Load the extension:
-   - Chrome:
-     1. Open Chrome and go to `chrome://extensions/`
-     2. Enable "Developer mode"
-     3. Click "Load unpacked"
-     4. Select the `dist/chrome` directory
-
-   - Firefox:
-     1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
-     2. Click "Load Temporary Add-on"
-     3. Select the `dist/firefox` directory
-
-## Development
+## 🔧 Technical Details
 
 ### Available Scripts
 - `npm run build` - Build both Chrome and Firefox extensions
