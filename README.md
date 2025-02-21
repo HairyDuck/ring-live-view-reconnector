@@ -7,6 +7,9 @@
 [![License](https://img.shields.io/github/license/HairyDuck/ring-live-view-reconnector)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
 
+[![Chrome Users](https://img.shields.io/chrome-web-store/users/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome%20users)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+[![Firefox Users](https://img.shields.io/amo/users/ring-live-view-reconnector?label=firefox%20users)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+
 > 🎥 Never miss a moment with your Ring cameras! This browser extension automatically fixes Ring Live View disconnections, ensuring continuous monitoring of your Ring doorbell cameras and security cameras.
 
 ## 🌟 Key Features
