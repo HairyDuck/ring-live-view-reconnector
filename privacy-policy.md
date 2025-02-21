@@ -63,4 +63,4 @@ If you have questions about these terms or privacy policy:
 - Create an issue on our GitHub repository at https://github.com/HairyDuck/ring-live-view-reconnector/issues
 - Include "Privacy Policy" or "Terms" in the issue title
 
-Last updated: February 19, 2025
+Last updated: February 21, 2025
