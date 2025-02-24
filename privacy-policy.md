@@ -23,51 +23,64 @@ The extension requires no special permissions:
 
 ## Terms of Use
 
-### Legal Compliance & Camera Usage
-- Users are solely responsible for ensuring their Ring camera usage complies with all local laws and regulations
-- This includes, but is not limited to:
-  - Laws regarding surveillance of public areas
-  - Privacy laws about recording in public spaces
-  - Regulations about continuous monitoring of public thoroughfares
-  - Requirements for posting surveillance notices
-  - Restrictions on recording audio in public areas
-- The extension provider is not responsible for:
-  - How users position or use their cameras
-  - What areas users choose to monitor
-  - Compliance with local privacy laws
-  - Any legal implications arising from continuous live viewing
-  - Recording or monitoring of public spaces
-- Users must ensure their camera setup and usage complies with their local jurisdiction's requirements
-
 ### Acceptance of Terms
-By installing and using this extension, you agree to:
-- These terms of use and privacy policy
-- Being solely responsible for legal compliance
-- Using the extension in accordance with local laws
+By installing and using this extension, you agree to these terms of use and privacy policy.
 
 ### Usage Rights
 - This extension is provided under the MIT License
 - You may use, modify, and distribute the extension following the MIT License terms
 - The source code is available for review on GitHub
 
+### Legal Compliance and User Responsibility
+- Users are solely responsible for ensuring their use of Ring cameras complies with all applicable laws
+- Users must comply with local privacy laws regarding video surveillance
+- Users are responsible for obtaining necessary permissions for recording or viewing public areas
+- The extension developer is not responsible for any legal issues arising from:
+  - Recording or viewing public areas
+  - Privacy violations
+  - Unauthorized surveillance
+  - Any other illegal use of Ring cameras
+- Users should consult local laws regarding video surveillance before using this extension
+
+### Hardware and Battery Disclaimer
+- Users acknowledge that extended live view usage may:
+  - Cause excessive battery drain
+  - Lead to battery heating
+  - Potentially reduce battery lifespan
+  - Void manufacturer warranties
+- The extension developer is not responsible for:
+  - Any damage to Ring devices
+  - Battery degradation or failure
+  - Warranty issues with Ring/Amazon
+  - Hardware malfunction
+  - Increased power consumption
+  - Any other hardware-related issues
+- Users use this extension with their Ring hardware at their own risk
+
 ### Disclaimer of Warranty
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
 - Fitness for a particular purpose
 - Merchantability
 - Non-infringement
+- Hardware compatibility
 - Legal compliance
 
 ### Limitation of Liability
-- The developers are not liable for any damages or issues arising from the use of this extension
+- The developers are not liable for any damages or issues arising from the use of this extension, including but not limited to:
+  - Hardware damage
+  - Battery issues
+  - Legal consequences
+  - Privacy violations
+  - Warranty violations
 - Users use this extension at their own risk
-- This includes any legal implications from camera usage or positioning
 - This extension is not affiliated with or endorsed by Ring or Amazon
-- Users are responsible for ensuring their camera usage complies with all applicable laws
+- Maximum liability limited to the amount paid for the extension (which is zero)
 
 ### Ring Service Terms
 - Users must comply with Ring's terms of service
 - This extension does not modify or interfere with Ring's security measures
 - Users are responsible for ensuring their use of this extension complies with Ring's terms
+- This extension may affect hardware warranty - use at your own risk
 
 ### Changes to Terms
 - These terms may be updated to reflect changes in functionality
@@ -80,6 +93,7 @@ This policy and terms may be updated to reflect:
 - Chrome Web Store policy requirements
 - User feedback and clarity improvements
 - Legal requirements
+- Hardware compatibility issues
 
 ## Contact
 If you have questions about these terms or privacy policy:
