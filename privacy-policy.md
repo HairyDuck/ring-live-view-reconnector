@@ -23,8 +23,27 @@ The extension requires no special permissions:
 
 ## Terms of Use
 
+### Legal Compliance & Camera Usage
+- Users are solely responsible for ensuring their Ring camera usage complies with all local laws and regulations
+- This includes, but is not limited to:
+  - Laws regarding surveillance of public areas
+  - Privacy laws about recording in public spaces
+  - Regulations about continuous monitoring of public thoroughfares
+  - Requirements for posting surveillance notices
+  - Restrictions on recording audio in public areas
+- The extension provider is not responsible for:
+  - How users position or use their cameras
+  - What areas users choose to monitor
+  - Compliance with local privacy laws
+  - Any legal implications arising from continuous live viewing
+  - Recording or monitoring of public spaces
+- Users must ensure their camera setup and usage complies with their local jurisdiction's requirements
+
 ### Acceptance of Terms
-By installing and using this extension, you agree to these terms of use and privacy policy.
+By installing and using this extension, you agree to:
+- These terms of use and privacy policy
+- Being solely responsible for legal compliance
+- Using the extension in accordance with local laws
 
 ### Usage Rights
 - This extension is provided under the MIT License
@@ -36,11 +55,14 @@ THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 - Fitness for a particular purpose
 - Merchantability
 - Non-infringement
+- Legal compliance
 
 ### Limitation of Liability
 - The developers are not liable for any damages or issues arising from the use of this extension
 - Users use this extension at their own risk
+- This includes any legal implications from camera usage or positioning
 - This extension is not affiliated with or endorsed by Ring or Amazon
+- Users are responsible for ensuring their camera usage complies with all applicable laws
 
 ### Ring Service Terms
 - Users must comply with Ring's terms of service
@@ -57,6 +79,7 @@ This policy and terms may be updated to reflect:
 - Changes in extension functionality
 - Chrome Web Store policy requirements
 - User feedback and clarity improvements
+- Legal requirements
 
 ## Contact
 If you have questions about these terms or privacy policy:

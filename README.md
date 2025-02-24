@@ -23,9 +23,25 @@
 - ⚡ **Fast Loading**: Optimized for quick response
 - 🛡️ **Secure**: No special permissions required
 
-## ⚠️ Important Battery Notice
+## ⚠️ Important Battery & Security Notice
 
-> 🔋 **For Battery-Powered Ring Devices**: Using this extension will keep your camera's live view continuously connected, which can significantly increase battery drain. If you're using battery-powered Ring devices (like the Battery Doorbell or Battery Spotlight Cam), please be aware that you may need to recharge your devices more frequently. This is most impactful when keeping the live view open for extended periods.
+### 🔋 Battery Warning
+Using this extension with battery-powered Ring devices (like Battery Doorbell or Battery Spotlight Cam) can:
+- Significantly increase battery drain due to continuous live view
+- Cause batteries to heat up during extended viewing periods
+- Potentially reduce battery lifespan with heavy usage
+- Lead to more frequent recharging requirements
+
+Consider using this extension sparingly with battery-powered devices to preserve battery health.
+
+### 🛡️ Security Information
+This extension:
+- Does NOT request or handle any Ring credentials
+- Does NOT have access to your Ring security system or arm/disarm features
+- Can ONLY see and interact with the live view page
+- Uses NO special browser permissions
+- Runs ONLY on account.ring.com after you're already logged in
+- Is completely open source for security verification
 
 ## 🎯 Compatibility
 

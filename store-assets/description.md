@@ -9,13 +9,22 @@ Auto-reconnect Ring camera live views instantly! Secure, privacy-focused extensi
 
 Never miss important moments due to Ring Live View disconnections! This lightweight, secure extension automatically reconnects your Ring cameras when they disconnect. It works entirely locally in your browser, with no data collection or external communication.
 
-🔒 SECURITY & PRIVACY FIRST:
-• Zero Data Collection: No personal data is ever collected or stored
-• 100% Local Operation: All code runs in your browser only
-• No External Communication: Never connects to any external servers
-• Minimal Permissions: Only runs on account.ring.com
-• Open Source: Code available for review on GitHub
-• MIT Licensed: Free to inspect and verify
+⚠️ IMPORTANT SAFETY NOTICES:
+
+🔒 SECURITY ASSURANCE:
+• NO access to Ring credentials or login information
+• NO ability to arm/disarm security systems
+• NO access to any security features
+• ONLY runs on live view page after you're logged in
+• ZERO special browser permissions
+• 100% open source for verification
+
+⚡ BATTERY WARNING:
+• Significant battery drain during continuous use
+• Batteries may heat up during extended viewing
+• Potential reduction in battery lifespan
+• More frequent recharging required
+• Recommended to use sparingly with battery devices
 
 ✨ KEY FEATURES:
 • Instant Auto-Reconnect: Automatically restores your Ring camera feed
@@ -24,9 +33,6 @@ Never miss important moments due to Ring Live View disconnections! This lightwei
 • Resource-Friendly: Minimal impact on browser performance
 • Visual Feedback: Subtle indicator shows reconnection status
 • Universal Support: Works with all Ring camera models
-
-⚠️ BATTERY NOTICE:
-For battery-powered Ring devices (like Battery Doorbell or Battery Spotlight Cam), please note that maintaining a continuous live view will increase battery drain. You may need to recharge your devices more frequently.
 
 🎯 COMPATIBLE DEVICES:
 • Ring Video Doorbell (all models)*
