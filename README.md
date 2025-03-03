@@ -2,13 +2,15 @@
 
 [![Build Status](https://github.com/HairyDuck/ring-live-view-reconnector/actions/workflows/build.yml/badge.svg)](https://github.com/HairyDuck/ring-live-view-reconnector/actions)
 [![GitHub Release](https://img.shields.io/github/v/release/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/releases/latest)
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
-[![Firefox Add-on](https://img.shields.io/amo/v/ring-live-view-reconnector?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
 [![License](https://img.shields.io/github/license/HairyDuck/ring-live-view-reconnector)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/HairyDuck/ring-live-view-reconnector)](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
 
 [![Chrome Users](https://img.shields.io/chrome-web-store/users/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome%20users)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/chiphiennfhnjnhnmjgmfgkilegpdpkh?label=chrome)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+
 [![Firefox Users](https://img.shields.io/amo/users/ring-live-view-reconnector?label=firefox%20users)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+[![Firefox Add-on](https://img.shields.io/amo/v/ring-live-view-reconnector?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+
 
 > 🎥 Never miss a moment with your Ring cameras! This browser extension automatically fixes Ring Live View disconnections, ensuring continuous monitoring of your Ring doorbell cameras and security cameras.
 
