@@ -125,11 +125,28 @@ function initialize() {
                 }
             }
 
-            // Method 2: Backup - look for any button containing "Reconnect" text
+            // Method 2: Backup - look for any button with reconnect text in various languages
+            const reconnectTexts = [
+                'Reconnect',                    // English
+                'Verbindung wiederherstellen',  // German
+                'Reconectar',                   // Spanish
+                'Reconnecter',                  // French
+                'Riconnetti',                   // Italian
+                'Opnieuw verbinden',            // Dutch
+                'Yeniden bağlan',               // Turkish
+                'Připojit znovu',               // Czech
+                'Połącz ponownie',              // Polish
+                'Переподключиться',             // Russian
+                'Újracsatlakozás',              // Hungarian
+                '重新连接',                      // Chinese (Simplified)
+                '再接続'                         // Japanese
+            ];
+            
             const allButtons = document.querySelectorAll('button');
             for (const button of allButtons) {
-                if (button.textContent.includes('Reconnect')) {
-                    debugLog('Found and clicking reconnect button (backup method)...', true);
+                const buttonText = button.textContent.trim();
+                if (reconnectTexts.some(text => buttonText.includes(text))) {
+                    debugLog(`Found and clicking reconnect button with text "${buttonText}" (backup method)...`, true);
                     button.click();
                     showReconnectNotification();
                     return true;
