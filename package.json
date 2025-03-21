@@ -1,6 +1,6 @@
 {
     "name": "ring-live-view-reconnector",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Browser extension that automatically reconnects Ring Live View when it disconnects",
     "scripts": {
         "clean": "node -e \"require('./scripts/build.js').cleanup()\"",
