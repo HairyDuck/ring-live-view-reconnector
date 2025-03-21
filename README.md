@@ -24,6 +24,7 @@
 
 - ✨ **Auto-Reconnect**: Instantly restores Ring camera live view when disconnected
 - 🔒 **Privacy First**: No data collection, works 100% locally
+- 🌍 **Multilingual**: Supports reconnection in multiple languages including English, German, Spanish and more
 - 🚀 **Zero Configuration**: Works immediately after installation
 - 🎯 **Lightweight**: Minimal system resource usage
 - 🌐 **Browser Support**: Works on both Chrome and Firefox
@@ -182,6 +183,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Please ensure your code follows the existing style and includes appropriate comments.
 
 ## Changelog
+
+### Version 1.1.2 (2025-03-20)
+- Added multilingual support for the reconnect button
+- Now supports German, Spanish, French, Italian, Dutch and several other languages
+- Improved button detection for non-English Ring interfaces
+- Enhanced logging to show which language was detected
 
 ### Version 1.1.1 (2025-02-21)
 - Removed unnecessary activeTab permission for better privacy
