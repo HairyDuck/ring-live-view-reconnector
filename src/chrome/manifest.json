@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Ring Live View Reconnector",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Automatically reconnects Ring Live View when disconnected, with a visual notification indicator.",
     "content_scripts": [
         {
