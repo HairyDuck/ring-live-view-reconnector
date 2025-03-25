@@ -26,6 +26,13 @@ jobs:
       id: package_version
       run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
+    - name: Extract version from manifest
+      id: manifest_version
+      run: |
+        VERSION=$(grep -o '"version": *"[^"]*"' src/chrome/manifest.json | cut -d'"' -f4)
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Extracted version from manifest: $VERSION"
+
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
@@ -69,23 +76,37 @@ jobs:
         if [[ "${{ github.ref }}" == refs/tags/v* ]]; then
           echo "is_release=true" >> $GITHUB_OUTPUT
           echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+          echo "needs_tag=false" >> $GITHUB_OUTPUT
         elif [[ "${{ github.event.head_commit.message }}" == *"RELEASE"* ]]; then
           echo "is_release=true" >> $GITHUB_OUTPUT
-          echo "version=${{ steps.package_version.outputs.version }}" >> $GITHUB_OUTPUT
+          echo "version=${{ steps.manifest_version.outputs.version }}" >> $GITHUB_OUTPUT
+          echo "needs_tag=true" >> $GITHUB_OUTPUT
         else
           echo "is_release=false" >> $GITHUB_OUTPUT
+          echo "needs_tag=false" >> $GITHUB_OUTPUT
         fi
+
+    # Create tag if this is a release commit and no tag exists
+    - name: Create tag for release
+      if: steps.check_release.outputs.needs_tag == 'true'
+      run: |
+        TAG_NAME="v${{ steps.manifest_version.outputs.version }}"
+        echo "Creating tag $TAG_NAME"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git tag -a $TAG_NAME -m "Release $TAG_NAME"
+        git push origin $TAG_NAME
 
     # Create Release
     - name: Create Release
       if: steps.check_release.outputs.is_release == 'true'
       id: create_release
-      uses: actions/create-release@v1
+      uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: v${{ steps.check_release.outputs.version }}
-        release_name: Release v${{ steps.check_release.outputs.version }}
+        name: Release v${{ steps.check_release.outputs.version }}
         draft: false
         prerelease: false
         body: |
@@ -96,26 +117,6 @@ jobs:
           Downloads:
           - Chrome Extension: ring-reconnector.zip
           - Firefox Extension: ring-reconnector.xpi
-
-    # Upload Release Assets
-    - name: Upload Chrome Release Asset
-      if: steps.check_release.outputs.is_release == 'true'
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/chrome/packed/ring-reconnector.zip
-        asset_name: ring-reconnector.zip
-        asset_content_type: application/zip
-
-    - name: Upload Firefox Release Asset
-      if: steps.check_release.outputs.is_release == 'true'
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/firefox/packed/ring-reconnector.xpi
-        asset_name: ring-reconnector.xpi
-        asset_content_type: application/x-xpinstall 
+        files: |
+          ./dist/chrome/packed/ring-reconnector.zip
+          ./dist/firefox/packed/ring-reconnector.xpi 
