@@ -1,0 +1,71 @@
+name: Auto Tag and Release
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  auto-tag-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: contains(github.event.head_commit.message, 'RELEASE')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Extract version from manifest
+        id: get-version
+        run: |
+          VERSION=$(grep -o '"version": *"[^"]*"' src/chrome/manifest.json | cut -d'"' -f4)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted version: $VERSION"
+      
+      - name: Create tag
+        id: create-tag
+        run: |
+          TAG_NAME="v${{ steps.get-version.outputs.version }}"
+          echo "Creating tag $TAG_NAME"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git tag -a $TAG_NAME -m "Release $TAG_NAME"
+          git push origin $TAG_NAME
+          echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
+      
+      - name: Build Chrome extension
+        run: |
+          npm install
+          npm run build:chrome
+          cd dist
+          zip -r ring-reconnector-chrome.zip chrome
+      
+      - name: Build Firefox extension
+        run: |
+          npm run build:firefox
+          cd dist
+          zip -r ring-reconnector-firefox.xpi firefox
+      
+      - name: Create Release
+        id: create-release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.create-tag.outputs.tag_name }}
+          name: Release ${{ steps.create-tag.outputs.tag_name }}
+          draft: false
+          prerelease: false
+          body: |
+            Changes in this Release ${{ steps.create-tag.outputs.tag_name }}
+            
+            ${{ github.event.head_commit.message }}
+            
+            Downloads:
+            - Chrome Extension: ring-reconnector-chrome.zip
+            - Firefox Extension: ring-reconnector-firefox.xpi
+          files: |
+            ./dist/ring-reconnector-chrome.zip
+            ./dist/ring-reconnector-firefox.xpi 
