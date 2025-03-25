@@ -15,9 +15,9 @@
 [![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/chiphiennfhnjnhnmjgmfgkilegpdpkh)](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
 
 
-[![Firefox Users](https://img.shields.io/amo/users/ring-live-view-reconnector?label=firefox%20users)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
-[![Firefox Add-on](https://img.shields.io/amo/v/ring-live-view-reconnector?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
-[![Firefox Add-on Rating](https://img.shields.io/amo/rating/ring-live-view-reconnector)](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+[![Firefox Users](https://img.shields.io/amo/users/ring-stay-connected?label=firefox%20users)](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
+[![Firefox Add-on](https://img.shields.io/amo/v/ring-stay-connected?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
+[![Firefox Add-on Rating](https://img.shields.io/amo/rating/ring-stay-connected)](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
 
 ## 🌟 Key Features
 
