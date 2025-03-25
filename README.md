@@ -1,4 +1,4 @@
-# Ring Live View Reconnector | Auto-Reconnect for Ring Cameras
+# Ring.com Stay Connected - Live View | Auto-Reconnect for Ring Cameras
 
 > 🎥 Never miss a moment with your Ring cameras! This browser extension automatically fixes Ring Live View disconnections, ensuring continuous monitoring of your Ring doorbell cameras and security cameras.
 
@@ -85,12 +85,12 @@ You'll know it's working when:
 ## 📥 Quick Install
 
 ### Chrome Users
-1. Visit [Ring Live View Reconnector on Chrome Web Store](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
+1. Visit [Ring.com Stay Connected - Live View on Chrome Web Store](https://chrome.google.com/webstore/detail/chiphiennfhnjnhnmjgmfgkilegpdpkh)
 2. Click "Add to Chrome"
 3. Start watching your Ring cameras worry-free!
 
 ### Firefox Users
-1. Visit [Ring Live View Reconnector on Firefox Add-ons](https://addons.mozilla.org/firefox/addon/ring-live-view-reconnector/)
+1. Visit [Ring.com Stay Connected - Live View on Firefox Add-ons](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
 2. Click "Add to Firefox"
 3. Enjoy uninterrupted Ring camera viewing!
 
@@ -182,6 +182,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Please ensure your code follows the existing style and includes appropriate comments.
 
 ## Changelog
+
+### Version 1.1.3 (2025-03-25)
+- Renamed extension from "Ring Live View Reconnector" to "Ring.com Stay Connected - Live View" for better clarity and SEO
 
 ### Version 1.1.2 (2025-03-20)
 - Added multilingual support for the reconnect button

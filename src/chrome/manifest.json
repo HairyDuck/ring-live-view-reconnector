@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Ring Live View Reconnector",
-    "version": "1.1.2",
-    "description": "Automatically reconnects Ring Live View when disconnected, with a visual notification indicator.",
+    "name": "Ring.com Stay Connected - Live View",
+    "version": "1.1.3",
+    "description": "Keep your Ring camera live view connected 24/7. Auto-reconnects when disconnected for continuous monitoring of your doorbell and security cameras.",
     "content_scripts": [
         {
             "matches": ["https://account.ring.com/*"],
