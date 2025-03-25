@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Ring.com Stay Connected - Live View",
     "version": "1.1.3",
-    "description": "Keep your Ring camera live view connected 24/7. Auto-reconnects when disconnected for continuous monitoring of your doorbell and security cameras.",
+    "description": "Keep Ring camera live view connected 24/7. Auto-reconnects when disconnected for continuous monitoring of your devices.",
     "content_scripts": [
         {
             "matches": ["https://account.ring.com/*"],
