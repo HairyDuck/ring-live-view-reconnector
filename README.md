@@ -23,7 +23,7 @@
 
 If you find this extension helpful, consider buying me a coffee! Your support helps maintain and improve this project.
 
-<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 163px !important;" ></a>
 
 ## 🌟 Key Features
 
@@ -178,7 +178,7 @@ If you encounter any issues or have suggestions:
 
 If you find this extension useful and would like to show your appreciation:
 
-<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 163px !important;" ></a>
 
 Your support helps maintain and improve this free, open-source extension!
 
