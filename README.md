@@ -19,6 +19,12 @@
 [![Firefox Add-on](https://img.shields.io/amo/v/ring-stay-connected?label=firefox)](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
 [![Firefox Add-on Rating](https://img.shields.io/amo/rating/ring-stay-connected)](https://addons.mozilla.org/firefox/addon/ring-stay-connected/)
 
+## Support This Project
+
+If you find this extension helpful, consider buying me a coffee! Your support helps maintain and improve this project.
+
+<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## 🌟 Key Features
 
 - ✨ **Auto-Reconnect**: Instantly restores Ring camera live view when disconnected
@@ -167,6 +173,14 @@ If you encounter any issues or have suggestions:
 1. Check the [Known Issues](https://github.com/HairyDuck/ring-live-view-reconnector/issues)
 2. Create a new issue if your problem isn't already listed
 3. Include debug logs if possible
+
+### Support This Project
+
+If you find this extension useful and would like to show your appreciation:
+
+<a href="https://www.buymeacoffee.com/lukedev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+Your support helps maintain and improve this free, open-source extension!
 
 ## Contributing
 
