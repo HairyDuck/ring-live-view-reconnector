@@ -125,6 +125,15 @@ function initialize() {
                 }
             }
 
+            // Method 1.5: Look for the button directly without requiring the modal
+            const directButton = document.querySelector('button[data-testid="modal__accept-button"]');
+            if (directButton) {
+                debugLog('Found reconnect button directly (without modal)...', true);
+                directButton.click();
+                showReconnectNotification();
+                return true;
+            }
+
             // Method 2: Backup - look for any button with reconnect text in various languages
             const reconnectTexts = [
                 'Reconnect',                    // English

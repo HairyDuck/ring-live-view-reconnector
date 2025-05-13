@@ -197,6 +197,12 @@ Please ensure your code follows the existing style and includes appropriate comm
 
 ## Changelog
 
+### Version 1.1.4 (2025-03-26)
+- Improved reconnect button detection
+- Added direct button detection without requiring modal element
+- Enhanced reliability for finding and clicking the reconnect button
+- Maintained backward compatibility with existing detection methods
+
 ### Version 1.1.3 (2025-03-25)
 - Renamed extension from "Ring Live View Reconnector" to "Ring.com Stay Connected - Live View" for better clarity and SEO
 
