@@ -35,13 +35,15 @@ function validateSharedCode(contentPath) {
     try {
         const content = fs.readFileSync(contentPath, 'utf8');
         
-        // Basic validation checks
-        if (!content.includes('function clickReconnectButton')) {
+        // Core reconnect: find + click (content-script or injected)
+        const hasReconnectLogic = content.includes('findAndClickReconnect') || content.includes('clickReconnectButton');
+        if (!hasReconnectLogic) {
             throw new Error('Missing core reconnect functionality');
         }
-
-        if (!content.includes('MutationObserver')) {
-            throw new Error('Missing DOM observation code');
+        // Either polling (setInterval) or DOM observation (MutationObserver)
+        const hasPollOrObserve = content.includes('setInterval') || content.includes('MutationObserver');
+        if (!hasPollOrObserve) {
+            throw new Error('Missing polling or DOM observation');
         }
 
         console.log('✓ Shared code is valid');

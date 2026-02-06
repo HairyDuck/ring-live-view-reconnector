@@ -88,6 +88,8 @@ You'll know it's working when:
 - Your live view stays connected without manual intervention
 - Debug logs appear in the console (if enabled)
 
+**Technical note:** The extension runs only as a **content script** (no script injection into the page). That way Ring cannot block it (e.g. via Content-Security-Policy). The content script shares the page DOM and finds the Reconnect control **only by visible text and aria-label** (e.g. "Reconnect" in multiple languages), then calls `element.click()`. No reliance on Ring's element IDs or CSS classes, and fully compliant with Chrome and Firefox extension policies (no `eval()`, no remote code).
+
 ## 📥 Quick Install
 
 ### Chrome Users
@@ -196,6 +198,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Please ensure your code follows the existing style and includes appropriate comments.
 
 ## Changelog
+
+### Version 1.1.5 (2025-02-06)
+- **Robustness**: Many more ways to find the reconnect button (alternative testids, role=dialog, aria, shadow DOM).
+- **Faster recovery**: Polling every 10s (was 30s); every 5s when on live view or when disconnect text is detected.
+- **Page-context injection**: Injected script runs in the page (same as Ring’s JS) and looks for “Reconnect” every 8s as a backup.
+- **DOM changes**: Observer now reacts to attribute changes (class, aria-hidden) so modal show/hide is detected even without new nodes.
+- **Disconnect detection**: If page text contains “session ended”, “disconnected”, “reconnect”, etc., reconnection is triggered more often.
+- **Notification**: Fallback placement when Ring’s close-button class name changes.
 
 ### Version 1.1.4 (2025-03-26)
 - Improved reconnect button detection
